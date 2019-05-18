@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:TT_App1_SL.ViewModel"
+             x:Class="TT_App1_SL.View.Cercania">
+
+    <ContentPage.BindingContext>
+        <viewModels:CercaniaViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout>
+            <Button VerticalOptions="CenterAndExpand"
+                HorizontalOptions="EndAndExpand"
+                Text="Ingresar"
+                 Command="{Binding Cercania}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

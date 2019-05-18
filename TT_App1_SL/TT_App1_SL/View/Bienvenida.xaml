@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TT_App1_SL.Bienvenida"
+             Title="Bienvenida"
+             NavigationPage.HasNavigationBar="False">
+    <ScrollView>
+        <StackLayout>
+
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Large"
+                Text="TT2018A057"/>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                Text="Bienvenido"/>
+
+            <Image Source="icono.png" />
+
+            <Button VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Iniciar Sesión"
+                    Clicked="Button_Clicked_1">
+            </Button>
+
+            <Button HorizontalOptions="CenterAndExpand"
+                    Text="Registrarse"
+                    Clicked="Button_Clicked">
+            </Button>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

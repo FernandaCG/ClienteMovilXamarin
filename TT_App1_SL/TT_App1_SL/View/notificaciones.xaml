@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TT_App1_SL.Notificaciones"
+             Title="Notificicaciones">
+    <ScrollView>
+        <StackLayout Spacing="10" Padding="10">
+            <Button x:Name="ButtonTrack" Text="Obtener Ubicación" Clicked="ButtonTrack_Clicked"/>
+
+            <Label
+                    VerticalTextAlignment="Start"
+                    HorizontalTextAlignment="Start"
+                    Text="Distancia de notificación"
+                    Margin="0, 20, 0, 0"
+                    FontSize="Medium"/>
+            <Label
+                    VerticalTextAlignment="Start"
+                    HorizontalTextAlignment="Start"
+                    Text="Indique la distancia a la que desea que se le notifique cuando esté próximo a una zona delictiva"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label BindingContext="{x:Reference TrackDistancia}" Text="{Binding Value,
+                              StringFormat=' {0:F0} Km'}"/>
+                <Stepper x:Name="TrackDistancia" Maximum="5"  Minimum="1" Increment="1" Value="1" ValueChanged="OnStepperValueChanged"/>
+            </StackLayout>
+
+            <!--<Slider x:Name="sliderDistancia"
+                        Maximum="5"
+                        Minimum="1">
+            </Slider>
+            
+            <Label x:Name="displayLabel"
+                       Text="{Binding Source={x:Reference sliderDistancia},
+                                      Path=Value,
+                                      StringFormat='Distancia : {0:F0} km'}"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />-->
+            <Label
+                    VerticalTextAlignment="Start"
+                    HorizontalTextAlignment="Start"
+                    Text="Tiempo de notificación"
+                    Margin="0, 20, 0, 0"
+                    FontSize="Medium"/>
+            <Label
+                    VerticalTextAlignment="Start"
+                    HorizontalTextAlignment="Start"
+                    Text="Indique cada cuantos segundos desea que se actualice su ubicación para notificarle cuando esté proximo a zona delictiva"/>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Label BindingContext="{x:Reference TrackTimeout}" Text="{Binding Value,
+                              StringFormat=' {0:F0} Segundos'}"/>
+                <Stepper x:Name="TrackTimeout" Maximum="60"  Minimum="10" Increment="10" Value="10" ValueChanged="OnStepperValueChangedTiempo"/>
+            </StackLayout>
+
+            <Label x:Name="labelGPSTrack"/>
+
+            <Label x:Name="LabelCount"/>
+
+            <Label
+                    VerticalTextAlignment="Start"
+                    HorizontalTextAlignment="Start"
+                    Text="Modo peatón"
+                    Margin="0, 20, 0, 0"
+                    FontSize="Medium"/>
+
+            <Label
+                    VerticalTextAlignment="Start"
+                    HorizontalTextAlignment="Start"
+                    Text="Si su traslado por la ciudad será caminando, active el modo peatón"/>
+
+            <Switch x:Name="switchModePeaton"
+                        HorizontalOptions="Center"
+                        Toggled="Switch_Toggled_Peaton">
+            </Switch>
+
+            <Label x:Name="labelModePeaton"
+                       Text="{Binding IsToggled, Source= {x:Reference switchModePeaton}}"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"/>
+            <!--<Picker
+                    x:Name="pickerTiempo" 
+                    SelectedIndexChanged="pickerTiempo_SelectedIndexChanged">
+            </Picker>
+            <BoxView 
+                    x:Name="boxTiempo">
+            </BoxView>-->
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

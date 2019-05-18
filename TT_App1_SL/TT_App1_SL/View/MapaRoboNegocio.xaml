@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:TT_App1_SL;assembly=TT_App1_SL"
+             x:Class="TT_App1_SL.MapaRoboNegocio"
+             xmlns:local="clr-namespace:TT_App1_SL"
+             Title="TT2018A057">
+    <StackLayout>
+        <!--<StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding CloseTappedCommand}"/>
+            </StackLayout.GestureRecognizers>-->
+        <ImageButton VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="EndAndExpand"
+                        Source="settingsIcon.png"
+                        Clicked="Button_Clicked">
+        </ImageButton>
+        <Label VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Bienvenido"/>
+        <Label VerticalTextAlignment="Start" HorizontalTextAlignment="Start" Text="Ultima actualización:"/>
+        <WebView
+                        x:Name="Webview"
+                        HeightRequest="1000"  
+                        WidthRequest="1000"   
+                        VerticalOptions="FillAndExpand">
+        </WebView>
+        <Label Text="Ubicación actual:"/>
+        <Label x:Name="lat"/>
+        <Label x:Name="lon"/>
+        <!--<ImageButton Source="transporteIcon.png" VerticalOptions="Center" HorizontalOptions="Center" Command="{Binding SlideOpenCommand}}"/>
+            <controls:SlideTransportes x:Name="MyLayoutView" DefaultHeight="{Binding DefaultHeight}" IsSlideOpen="{Binding IsSlide}"/>-->
+    </StackLayout>
+</ContentPage>

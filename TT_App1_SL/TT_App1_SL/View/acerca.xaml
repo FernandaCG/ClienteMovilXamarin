@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TT_App1_SL.Acerca"
+             Title="Acerca de">
+    <ScrollView>
+        <StackLayout>
+            <Image
+                Source="icono.png"  WidthRequest = " 100"
+                HeightRequest = "100"
+                Margin="0,10,0,0"/>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                Text="TT2018A057"/>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Small"
+                Text="Versión 1.0"/>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                FontSize="Medium"
+                Text="Desarrollada por:"
+                Margin="5,0,0,0"/>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                Text="Fernanda Ivette Campos Gómez"/>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                Text="Josue Daniel Garduño Perez"/>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                Text="Julián Eduardo Sánchez Monroy"/>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                FontSize="Medium"
+                Text="En colaboración con:"
+                Margin="5,20,0,0"/>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                Text="Dra. Yasmín Ivette Jimenez Galán"/>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                Text="Dr. José Giovanni Guzmán Lugo"/>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                Text="Escuela Superior de Cómputo"
+                Margin="0,20,0,0"/>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                Text="Instituto Politécnico Nacional"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

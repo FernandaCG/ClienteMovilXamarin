@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TT_App1_SL.Permisos"
+             Title="Permisos">
+    <StackLayout>
+        <Label
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center">
+            Permisos
+        </Label>
+
+        <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start">
+            Permitir que se acceda a:
+        </Label>
+
+        <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start">
+            Ubicación
+        </Label>
+
+        <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start">
+            Datos Celulares
+        </Label>
+
+        <Switch HorizontalOptions="End">            
+        </Switch>
+    </StackLayout>
+</ContentPage>

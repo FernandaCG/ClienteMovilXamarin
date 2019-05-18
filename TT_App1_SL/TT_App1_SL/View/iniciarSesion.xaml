@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:TT_App1_SL.ViewModel"
+             x:Class="TT_App1_SL.IniciarSesion"
+             Title="iniciarSesion"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.BindingContext>
+        <viewModels:LoginViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <Label
+            VerticalTextAlignment="Center"
+            HorizontalTextAlignment="Center"
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand">
+            Iniciar Sesión
+        </Label>
+
+        <Label
+            VerticalTextAlignment="Start"
+            HorizontalTextAlignment="Start">
+            Correo electrónico
+        </Label>
+
+        <Entry Placeholder="example@example.com" Text="{Binding username}">
+
+        </Entry>
+        <Label
+            VerticalTextAlignment="Start"
+            HorizontalTextAlignment="Start">
+            Contraseña
+        </Label>
+
+        <Entry IsPassword="True" Text="{Binding password}">
+
+        </Entry>
+
+        <Button VerticalOptions="CenterAndExpand"
+                HorizontalOptions="EndAndExpand"
+                Text="Ingresar"
+                 Command="{Binding LoginCommand}">
+        </Button>
+
+        <Button HorizontalOptions="CenterAndExpand"
+                Text="Registrarse"
+                Clicked="Button_Clicked">
+        </Button>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TT_App1_SL.RegistrarUsuario"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:viewModels="clr-namespace:TT_App1_SL.ViewModel"
+             xmlns:behaviours="clr-namespace:TT_App1_SL.Helpers">
+
+    <ContentPage.BindingContext>
+        <viewModels:RegistrarViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ScrollView>
+        <StackLayout>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Text="Registrar Usuario"/>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text="Ingrese su información personal"/>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text="Dirección de correo electrónico"/>
+            <Entry Placeholder="example@example.com" Text="{Binding userName}" Keyboard="Email">
+                <Entry.Behaviors>
+                    <behaviours:BehaviorValid/>
+                </Entry.Behaviors>
+            </Entry>
+            <Label x:Name="validUsername"/>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text="Contraseña"/>
+            <Entry IsPassword="True" MaxLength="8" Text="{Binding password}"></Entry>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text="Nombre"/>
+            <Entry Text="{Binding nombre}"></Entry>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text="Apellido paterno"/>
+            <Entry Text="{Binding apellitoPat}"></Entry>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text="Apellido materno"/>
+            <Entry Text="{Binding apellidoMat}"></Entry>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text="Fecha de nacimiento"/>
+            <DatePicker Date="{Binding fechaNac}"></DatePicker>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text="Número de celular"/>
+            <Entry  Text="{Binding celular}" Placeholder="Número a 10 dígitos" MaxLength="10" Keyboard="Numeric"></Entry>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                TextColor="Blue"
+                Text="¿Ya tiene una cuenta?">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+            <Button VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Continuar"
+                    Command="{Binding RegistrarCommand}">
+            </Button>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

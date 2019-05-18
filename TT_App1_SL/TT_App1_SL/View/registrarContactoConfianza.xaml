@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:TT_App1_SL.ViewModel"
+             x:Class="TT_App1_SL.RegistrarContactoConfianza"
+             Title="RegistrarContactoConfianza"
+             NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <viewModels:AgregarCConfianzaViewModel/>
+    </ContentPage.BindingContext>
+        
+    <ScrollView>
+        <StackLayout>
+            <Label
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                Text="Contacto de confianza"/>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text="Ingrese los datos de su contacto de confianza para notificarle, si así lo desea, su cercanía a una zona delictiva"/>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+               Text="Nombre"/>
+            <Entry Text="{Binding nombre}"></Entry>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text="Apellido paterno"/>
+            <Entry Text="{Binding apellitoPat}"></Entry>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text=" Apellido materno"/>
+            <Entry Text="{Binding apellidoMat}"></Entry>
+            <Label
+                VerticalTextAlignment="Start"
+                HorizontalTextAlignment="Start"
+                Text="Número de celular"/>
+            <Entry Text="{Binding celular}" Placeholder="Número a 10 dígitos" MaxLength="10" Keyboard="Numeric"></Entry>
+            <Button VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Continuar"
+                    Command="{Binding AddCommandC}">
+            </Button>
+            <Button VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="EndAndExpand"
+                    Text="Omitir"
+                    Clicked="Button_Clicked_1">
+            </Button>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
